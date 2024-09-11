@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductsModel;
 use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
     public function index()
     {
-        $trenutnoVreme = date(format: "h:i:s");
-        $sat = date(format: "h");
-        return view("welcome", compact('trenutnoVreme', 'sat'));
+        $latestProducts = ProductsModel::orderBy("id", 'desc')->take(6)->get();
+        return view("welcome", compact('latestProducts'));
     }
 }

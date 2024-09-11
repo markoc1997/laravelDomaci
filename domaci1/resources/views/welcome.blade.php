@@ -9,15 +9,11 @@
         <div class="col-lg-12">
             <div class="card mb-4">
                 <div class="card-body">
-                    <h2 class="card-title">Welcome Content</h2>
-                    <p>Trenutno vreme je {{$trenutnoVreme}}</p>
-                    <p>Sat {{$sat}}</p>
+                    <h2 class="card-title">Latest Products</h2>
 
-                    @if ($sat >= 0 && $sat <= 12)
-                        <p>Dobro jutro</p>
-                    @else
-                        <p>Dobar dan</p>
-                    @endif
+                    @foreach ($latestProducts as $product)
+                        <p>{{$product["name"]}}</p>
+                    @endforeach
 
                 </div>
             </div>
