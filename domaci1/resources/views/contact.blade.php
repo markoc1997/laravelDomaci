@@ -9,15 +9,15 @@
                 <form>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
                     </div>
                     <div class="mb-3">
                         <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" placeholder="Enter the subject" required>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
