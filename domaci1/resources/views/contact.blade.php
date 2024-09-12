@@ -6,7 +6,8 @@
     <div class="row">
         <div class="col-lg-8 mb-5">
             <div class="form-container">
-                <form>
+                <form method="POST" action="/send-contact">
+                    @csrf
                     <div class="mb-3">
                         <label for="email" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
